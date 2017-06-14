@@ -1,2 +1,3 @@
 # WeatherApp
-Simple weather information application
+Simple weather information application.
+Using openweather map service
