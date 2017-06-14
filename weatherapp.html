@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Weather Information</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="lib/js/jquery.js"></script>
+<script src="lib/js/angular.js"></script>
+<script src="app.js"></script>
+<script src="lib/js/ngStorage.min.js"></script>
+<link rel="stylesheet" href="lib/css/bootstrap.css">
+<link href="style.css" rel="stylesheet">
+
+
+
+
+
+
+</head>
+<body>
+	<div ng-app="WeatherApp" ng-controller="WeatherCtrl"
+		ng-init="getWatherData()">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-1 col-md-1 col-lg-2"></div>
+				<div class="col-sm-10 col-md-10 col-lg-8">
+
+					<div class="row visible-md visible-lg">
+						<div class="col-sm-6 col-md-6 col-lg-6">
+							<img src="logo.png" class="navimg">
+						</div>
+						<div class="col-sm-6 col-md-6 col-lg-6" class="navocs">
+							<h4>
+								<b>Weather Information</b>
+							</h4>
+						</div>
+					</div>
+
+					<div class="row bluebar">
+
+						<center>
+							<p class="datetime">{{currentDate}} {{currentTime}}
+							<p>
+						</center>
+
+					</div>
+					<div class="midarea">
+						<div class="row">
+							<p>
+								<strong><h4 class="headalign">Weather Data</h4></strong>
+							</p>
+						</div>
+						<div class="row">
+							<div class="col-sm-8 col-md-8 col-lg-8">
+
+								<p id="txtalign">
+									<strong>Enter your city name</strong> <input type="text"
+										ng-model="cityName" id="textData"
+										placeholder="Enter Your City Name"> <input
+										class="myBtn" type="button" value="GetDetails"
+										ng-click="getWatherData()">
+								<div class="row">
+									<h1>{{ cityName }}</h1>
+								</div>
+								<div class="row">
+									<div class="col-md-2"></div>
+									<div class="col-md-6" id="whtrContent">
+										<p align="center">
+											<img src="http://openweathermap.org/img/w/{{ imgCode }}.png">
+										</p>
+										<h1 align="center" class="cityName">{{ tmp | number : 1
+											}}°C</h1>
+										<br>
+										<p align="center">
+											<span class="temp"> {{desc}}</span>
+										</p>
+										<p align="center">
+											<span class="temp"> Min Temp : {{minTemp | number : 1
+												}}°C </span><span class="temp"> Max Temp : {{maxTemp |
+												number : 1 }}°C </span>
+										</p>
+
+										<p align="center">
+											<span class="temp"> Wind : {{windSpeed}}miles/hr </span>
+										</p>
+
+										<p align="center">
+											<span class="temp"> Humidity : {{hmdy}}% </span>
+										</p>
+
+									</div>
+									<div class="col-md-2"></div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-md-2"></div>
+									<div class="col-md-6">
+										<a>5 Days Forecast</a> <a>16 Days Forecast</a>
+										<div class="col-md-2"></div>
+									</div>
+								</div>
+
+
+							</div>
+							<div class="col-sm-4 col-md-4 col-lg-4" class="sidep">
+
+								<div class="row">
+									<div class="panel panel-default">
+										<div class="panel-body grad1">
+											<h4 class="panelhead">Other Information:</h4>
+											<ul class="panelbodye">
+												<li><a class="linkStyle">UV Index </a></li>
+												<li><a class="linkStyle">Historical Data</a></li>
+												<li><a class="linkStyle">Weather Map</a></li>
+
+											</ul>
+
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="panel " class="panelbody">
+										<div class="panel-body">
+											<h4 class="panelhead">Recent searches</h4>
+											<ul class="panelbodye" ng-repeat="cityList in saveList">
+												<li><a>{{cityList}}</a></li>
+
+
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="row" class="footer">
+							<hr>
+							<small>©Copyright:All rights reserved.</small>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="col-sm-1 col-md-1 col-lg-2"></div>
+				</div>
+
+
+			</div>
+		</div>
+</body>
+</html>
