@@ -1,0 +1,96 @@
+.header {
+	text-align: center;
+	background-color: darkgray;
+}
+
+.myBtn {
+	background: white;
+	border: 1px solid silver;
+}
+
+#whtrContent {
+	border: 1px solid silver;
+	background-color: cadetblue;
+}
+
+#whtrImg {
+	width: 150px;
+	height: 150px;
+	border: 1px solid burlywood
+}
+
+.cityName {
+	font-size: 75px;
+}
+
+.temp {
+	padding: 15px;
+	color: white;
+}
+
+.linkStyle {
+	font-size: 15px;
+}
+
+.navimg {
+	max-height: 100px;
+	max-width: 150px;
+}
+
+.navocs {
+	margin-top: 10px;
+	text-align: center;
+	text-align: right;
+}
+
+.bluebar {
+	background-color: #6BB5EF;
+	height: 100%;
+	max-height: 40px;
+	border-radius: 10px;
+}
+
+.datetime {
+	text-align: right;
+	color: white;
+	font-size: 20px;
+	padding: 7px;
+}
+
+.midarea {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.headalign {
+	margin-left: 5px;
+	color: #6EBAFE;
+}
+
+.grad1 {
+	background: linear-gradient(white, #D9E2E8);
+}
+
+.panelbodye {
+	list-style-type: disc;
+	font-size: 12px;
+}
+
+.panelheadq {
+	background: #E6E6E3;
+	font-size: medium;
+	padding: 3px;
+	border-top: 2px solid lightgrey
+}
+
+.panelhead {
+	font-size: 14px !important;
+}
+
+.panelbody {
+	margin-left: -15px;
+}
+
+.footer {
+	text-align: center;
+}
